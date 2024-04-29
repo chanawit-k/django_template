@@ -1,6 +1,6 @@
 # Django Project Configuration Guide
 
-This guide provides instructions for configuring a Django project with a custom user model, configuring templates, and managing static files.
+This guide provides instructions for configuring a Django project with a custom user model, configuring templates, managing static files, configuring mysql DB.
 
 ## 1. Custom User Model (AbstractUser):
 
@@ -73,6 +73,26 @@ TEMPLATES = [
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+```
+
+## 4. Configuring MySQL DB:
+
+### settings.py
+```python
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sample_db_django',
+        'USER': 'root',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
+    }
+
+}
 
 ```
 
