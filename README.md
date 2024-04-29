@@ -25,7 +25,11 @@ class CustomUser(AbstractUser):
 
 AUTH_USER_MODEL = 'myapp.CustomUser'
 
-### 2. Create Templates Directory:
+
+
+
+
+## 2. Create Templates Directory:
 
 - Create a new Django app (if not already created) to store the custom user model.
 - Define a custom user model by subclassing `AbstractUser` in your app's `models.py` file.
