@@ -104,7 +104,24 @@ DATABASES = {
 }
 ```
 
-## 5. add gitignore
+## 5. configuration media url
+## urls.py
+``` python
+from django.conf.urls.static import static
+from django.conf import settings
+urlpatterns = [
+    ...
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+## settings.py
+```python
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+```
+
+## 6. add gitignore
 ``` python
 *.pyc
 .idea
@@ -112,6 +129,7 @@ DATABASES = {
 /.vscode
 
 ```
+
 
 
 
