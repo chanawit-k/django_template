@@ -43,7 +43,18 @@ class CustomUserAdmin(UserAdmin):
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
 ```
+### urls.py
+``` python
+from django.urls import path
+from . import views
 
+app_name = 'accounts'
+
+
+urlpatterns = [
+    path('', views.SampleView.as_view(), name='sample_view'),
+]
+```
 ## 2. Configuration of Templates:
 
 - Create a new directory named `templates`
