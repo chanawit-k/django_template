@@ -104,7 +104,7 @@ DATABASES = {
 }
 ```
 
-## 5. configuration media url
+## 5. configuration media url:
 ## urls.py
 ``` python
 from django.conf.urls.static import static
@@ -121,7 +121,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 ```
 
-## 6. add gitignore
+## 6. add gitignore:
 ``` python
 *.pyc
 .idea
