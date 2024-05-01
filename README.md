@@ -69,7 +69,7 @@ TEMPLATES = [
 
 ### settings.py
 ```python
-
+import os
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
@@ -91,6 +91,14 @@ DATABASES = {
     }
 
 }
+```
+
+## 5. add gitignore
+``` python
+*.pyc
+.idea
+/.venv
+/.vscode
 
 ```
 
