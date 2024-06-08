@@ -15,7 +15,7 @@ This guide provides instructions for configuring a Django project with a custom 
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-class CustomUser(AbstractUser):
+class User(AbstractUser):
     # Add custom fields here
     pass
 ```
