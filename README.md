@@ -22,7 +22,7 @@ class User(AbstractUser):
 
 ### settings.py
 ```python
-AUTH_USER_MODEL = 'accounts.CustomUser'
+AUTH_USER_MODEL = 'accounts.User'
 ```
 
 
@@ -54,6 +54,16 @@ app_name = 'accounts'
 urlpatterns = [
     path('', views.SampleView.as_view(), name='sample_view'),
 ]
+```
+
+### urls.py (main)
+```python
+from django.urls import path, include
+urlpatterns = [
+    ...
+    path('accounts/', include('accounts.urls')),
+]
+
 ```
 ## 2. Configuration of Templates:
 
