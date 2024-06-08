@@ -34,11 +34,11 @@ from .models import User
 
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
-    list_display = ('username', 'email', 'first_name', 'last_name', 'phone_number')
+    list_display = ('username', 'email', 'first_name', 'last_name')
 
     fieldsets = (
         (None, {'fields': ('username', 'email', 'password')}),
-        ('Personal info', {'fields': ('first_name', 'last_name', 'phone_number')}),
+        ('Personal info', {'fields': ('first_name', 'last_name')}),
         ('Permissions', {'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions')}),
         ('Important dates', {'fields': ('last_login', 'date_joined')}),
     )
